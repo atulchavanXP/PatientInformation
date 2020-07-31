@@ -1,0 +1,10 @@
+C:\Users\achavan\source\repos\PatientSystem\PatientSystem.Repository\bin\Debug\netcoreapp3.1\PatientSystem.Repository.deps.json
+C:\Users\achavan\source\repos\PatientSystem\PatientSystem.Repository\bin\Debug\netcoreapp3.1\PatientSystem.Repository.dll
+C:\Users\achavan\source\repos\PatientSystem\PatientSystem.Repository\bin\Debug\netcoreapp3.1\PatientSystem.Repository.pdb
+C:\Users\achavan\source\repos\PatientSystem\PatientSystem.Repository\bin\Debug\netcoreapp3.1\iMedOneDB.DLL
+C:\Users\achavan\source\repos\PatientSystem\PatientSystem.Repository\obj\Debug\netcoreapp3.1\PatientSystem.Repository.AssemblyInfoInputs.cache
+C:\Users\achavan\source\repos\PatientSystem\PatientSystem.Repository\obj\Debug\netcoreapp3.1\PatientSystem.Repository.AssemblyInfo.cs
+C:\Users\achavan\source\repos\PatientSystem\PatientSystem.Repository\obj\Debug\netcoreapp3.1\PatientSystem.Repository.csproj.CopyComplete
+C:\Users\achavan\source\repos\PatientSystem\PatientSystem.Repository\obj\Debug\netcoreapp3.1\PatientSystem.Repository.dll
+C:\Users\achavan\source\repos\PatientSystem\PatientSystem.Repository\obj\Debug\netcoreapp3.1\PatientSystem.Repository.pdb
+C:\Users\achavan\source\repos\PatientSystem\PatientSystem.Repository\obj\Debug\netcoreapp3.1\PatientSystem.Repository.csprojAssemblyReference.cache

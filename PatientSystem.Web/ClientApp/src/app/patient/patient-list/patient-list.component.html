@@ -1,0 +1,22 @@
+<h1 id="tableLabel">Patient Information</h1>
+
+<p *ngIf="!patients"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="patients">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Sur Name</th>
+      <th>DOB</th>
+      <th>Gender</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let patient of patients">
+      <td>{{ patient.name }}</td>
+      <td>{{ patient.surName }}</td>
+      <td>{{ patient.dob | date:'dd-MM-yyyy' }}</td>
+      <td>{{ patient.gender }}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="8.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PatientSystem.Repository\PatientSystem.Repository.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="iMedOneDB">
+      <HintPath>..\PatientSystem.Web\Dependencies\iMedOneDB.DLL</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

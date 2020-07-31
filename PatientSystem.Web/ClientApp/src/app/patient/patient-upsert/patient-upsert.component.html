@@ -1,0 +1,69 @@
+<div class="container">
+  <h3>Add Patient</h3>
+  <form name="patientInfo" id="patientInfo" #patientInfo="ngForm">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" name="name" [(ngModel)]="patient.name" required pattern="[a-zA-z]*" placeholder="name" #name="ngModel">
+      <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+        <div *ngIf="name.errors.required">Name is required</div>
+        <div *ngIf="name.errors.pattern">Invalid Name: Only alphabets are allowed</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="name">Surname</label>
+      <input type="text" class="form-control" id="surName" name="surName" [(ngModel)]="patient.surName" required pattern="[a-zA-z]*" placeholder="Surname" #surName="ngModel">
+
+      <div *ngIf="surName.invalid && (surName.dirty || surName.touched)" class="alert alert-danger">
+        <div *ngIf="surName.errors.required">Surname is required</div>
+        <div *ngIf="name.errors.pattern">Invalid Surname: Only alphabets are allowed </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="name">Date Of Birth</label>
+      <input type="date" class="form-control" id="dob" name="dob" [(ngModel)]="patient.dob" placeholder="DOB" #dob="ngModel" (change)="validateDate($event)">
+
+      <div *ngIf="dob.invalid" class="alert alert-danger">
+        Invalid DOB: Should not be greater than today’s date and Should not be less than 100 years
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="name">Gender</label>
+      <select id="gender" class="form-control" name="gender" required [(ngModel)]="patient.gender" #gender="ngModel">
+        <option *ngFor="let gender of genders" value="{{gender.name}}" id="{{gender.name}}">
+          {{ gender.name }}
+        </option>
+      </select>
+
+      <div *ngIf="gender.invalid && (gender.dirty || gender.touched)" class="alert alert-danger">
+        <div *ngIf="gender.errors.required">Gender is required</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="name">State</label>
+      <select id="state" class="form-control" name="state" (change)="onStateChange($event)">
+        <option *ngFor="let state of states" value="{{state.id}}" id="{{state.id}}">
+          {{ state.name }}
+        </option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="name">City</label>
+      <select id="city" class="form-control" name="city" required [(ngModel)]="patient.cityId" #city="ngModel">
+        <option *ngFor="let city of cities" value="{{city.id}}" id="{{city.id}}">
+          {{ city.name }}
+        </option>
+      </select>
+
+      <div *ngIf="city.invalid && (city.dirty || city.touched)" class="alert alert-danger">
+        <div *ngIf="city.errors.required">City is required</div>
+      </div>
+    </div>
+
+    <input class="btn btn-success" type="button" name="save" (click)="addPatient(patient)" value="Save" [disabled]="patientInfo.invalid" />
+  </form>
+</div>
